@@ -57,13 +57,14 @@ main p {
     margin: 0;
     line-height: 1.4;
 }
-#roles div{
+#roles ul{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
+    list-style: none;
 }
-#roles div > div {
+#roles ul > li {
     flex: 1 1 250px;
     display: flex;
     align-items: center;
@@ -80,22 +81,23 @@ main p {
     background-color: white;
     border-radius: 50%;
 }
-.role-description h3 {
+#roles ul > li .role-description h3 {
     margin: 0 0 0.5rem;
     color: #4DD0E1;
     font-size: 1.2rem;
 }
-.role-description p {
+#roles ul > li .role-description p {
     margin: 0;
     line-height: 1.4;
     font-size: 0.9rem;
     color: #9AA4B2;
 }
-#warframes div {
+#warframes ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
+    list-style: none;
 }
 .warframe {
     flex: 1 1 250px;
@@ -118,7 +120,7 @@ main p {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: space-between;
+    
 }
 .warframe-description p {
     margin: 0;
@@ -132,4 +134,24 @@ main p {
     padding: 2px;
     border: 1px solid #D4AF37;
     background-color: white;
+}
+.warframe-description a {
+    color: #4DD0E1;
+    border: 1px solid #4DD0E1;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: inline-block;
+}
+.warframe-description a:hover {
+    color: #E6EAF0;
+    background-color: #4DD0E1;
+}
+footer {
+    background-color: #141820;
+    border-top: 1px solid #2E3541;
+    padding: 1rem;
+    text-align: center;
 }
