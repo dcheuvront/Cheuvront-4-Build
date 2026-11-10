@@ -3,13 +3,14 @@ body {
     color: #E6EAF0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    
     min-height: 100vh;
 }
 header {
     background-color: #141820;
     border-bottom: 1px solid #2E3541;
     padding: 1rem;
+    text-align: center;
 }
 header h1 {
     margin: 0;
@@ -22,10 +23,12 @@ nav ul {
     background-color: #1F2530;
     border-bottom: 1px solid #2E3541;
     padding: 0.5rem 1rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: space-evenly;
     list-style: none;
     margin: 0;
+    text-align: center;
 }
 nav a {
     color: #4DD0E1;
@@ -127,6 +130,7 @@ main p {
     line-height: 1.4;
     font-size: 0.9rem;
     color: #9AA4B2;
+    padding-bottom: 8px;
 }
 .warframe-description h3 img {
     width: 24px;
@@ -154,4 +158,28 @@ footer {
     border-top: 1px solid #2E3541;
     padding: 1rem;
     text-align: center;
+}
+@media screen and (min-width: 600px){
+    nav ul {
+        display: flex;
+    }
+}
+@media screen and (min-width: 1000px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "home home"
+        "roles warframes";
+    }
+    #home {
+        grid-area: home;
+    }
+    #roles {
+        grid-area: roles;
+    }
+    #warframes {
+        grid-area: warframes;
+    }
+    
 }
